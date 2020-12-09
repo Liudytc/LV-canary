@@ -1,0 +1,16 @@
+{
+  "name": "node_nano_speedy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.805.0",
+    "puppeteer": "^5.5.0",
+    "winston": "^3.3.3"
+  }
+}
