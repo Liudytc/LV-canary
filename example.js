@@ -31,7 +31,7 @@ const logger = winston.createLogger({
     // - Write all logs with level `info` and below to `combined.log`
     //
     new winston.transports.File({ filename: '/Users/code4days/Documents/logs/error.log', level: 'error' }),
-    new winston.transports.File({ filename: '/Users/code4days/Documents/logs/combined.log'}),
+    new winston.transports.File({ filename: '/Users/code4days/Documents/logs/combined.log' }),
   ],
 });
 
@@ -49,9 +49,10 @@ logger.info("starting application.");
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36');
-  const url = 'https://us.louisvuitton.com/eng-us/products/nano-speedy-monogram-010575';
+  const urls = ['https://us.louisvuitton.com/eng-us/products/nano-speedy-monogram-010575',
+    'https://uk.louisvuitton.com/eng-us/products/nano-speedy-monogram-010575'];
   // const url = 'https://us.louisvuitton.com/eng-us/products/trunk-clutch-epi-nvprod1040054v#M53052'
-  logger.info("url: " + url);
+  logger.info("urls: " + url);
   await page.goto(url, { waitUntil: 'networkidle2' });
   // await page.screenshot({path: 'example.png'});
   const found = await page.evaluate(() => window.find("In stock"));
