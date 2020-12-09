@@ -80,6 +80,7 @@ logger.info("starting application.");
         });
   }
   logger.info("Finished searching US website");
+  logger.info("----------------------new session------------------------");
 })();
 // (async () => {
 //   logger.info("Searching UK website");
