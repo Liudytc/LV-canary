@@ -63,7 +63,7 @@ logger.info("starting application.");
     // Create publish parameters
     var params = {
       Message: 'Nano Speedy now available on US website!!!', /* required */
-      TopicArn: 'arn:aws:sns:us-east-1:233567662909:LV-Availability-Topic'
+      TopicArn: '<ARN_TO_TOPIC>'
     };
     logger.info("Params for SNS created.");
     var publishTextPromise = new AWS.SNS().publish(params).promise();
